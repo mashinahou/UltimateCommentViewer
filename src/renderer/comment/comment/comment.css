@@ -1,0 +1,22 @@
+.comment-container{
+    height: 60px;
+    display: flex;
+    background: antiquewhite;
+}
+.user-icon{
+    width: 60px;
+    height: 60px;
+    background: red;
+}
+
+.user-name{
+
+    font-size: 11px;
+}
+.comment{
+    margin: 0 0 0 30px;
+    padding: 2vh 0;
+    font-size: 15px;
+    width: 100%;
+}
+

@@ -1,0 +1,4 @@
+# プロジェクトの除外パス
+/build/
+/dist/
+/node_modules/
