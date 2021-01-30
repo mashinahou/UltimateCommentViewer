@@ -1,3 +1,5 @@
+import { AxiosResponse } from "axios";
+
 export default interface IRestClient{
-    getWebSocketUrlAsync(id:string): Promise<string|null>
+    getWebSocketUrlAsync(id:string): Promise<AxiosResponse<string> | null>
 }

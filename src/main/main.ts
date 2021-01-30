@@ -41,11 +41,14 @@ ipcMain.handle('connect',   async () => {
     const rest = new NicoRestClient();
     //
     //　視聴ページのHTMLを取得してきている
-    const html = await rest.getWebSocketUrlAsync("lv330267235") || "";
+    const response = await rest.getWebSocketUrlAsync("lv330267235")
 
     //ここでHTMLを渡すとtypeErrorが発生している
-    const parser = new NicoLiveHtmlParser(html);
+    const parser = new NicoLiveHtmlParser(response?.data ?? '');
 
+    // FIXME: parser.GetSessionWebSocketUrlが
+    // うまく動かなかったのでデバッグだけのために改造しています。
+    // by mashinahou
     const url = parser.GetSessionWebSocketUrl();
     console.log(url);
     return url;

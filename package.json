@@ -50,6 +50,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/jest": "^26.0.20",
     "electron": "^11.2.1",
     "electron-builder": "^22.9.1",
